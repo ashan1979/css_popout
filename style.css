@@ -26,6 +26,7 @@ img {
 }
 
 .person {
+    --transform-speed: 250ms;
     position: relative;
     max-width: 15rem;
     margin-inline: auto;
@@ -38,6 +39,12 @@ img {
     align-items: end;
     border-radius: 0 0 100vw 100vw;
     overflow: hidden;
+
+    transition: transform var(--transform-speed) ease-in-out;
+}
+
+.person_container:hover {
+    transform: scale(1.1);
 }
 
 .person_circle {
@@ -53,7 +60,12 @@ img {
 .person_img {
     position: relative;
     left: 3.5rem;
-    bottom: 1.6rem;
+    bottom: 1rem;
     z-index: 2;
-    transform: scale(2);
+    transform: scale(2.1);
+    transition: transform var(--transform-speed) ease-in-out;
+}
+
+.person_container:hover .person_img {
+    transform: scale(2.1) translateY(-0.05rem);
 }
