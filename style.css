@@ -24,3 +24,36 @@ img {
     max-width: 100%;
     display: block;
 }
+
+.person {
+    position: relative;
+    max-width: 15rem;
+    margin-inline: auto;
+}
+
+.person_container {
+    /* background: blanchedalmond; */
+    aspect-ratio: 1 / 1.5;
+    display: grid;
+    align-items: end;
+    border-radius: 0 0 100vw 100vw;
+    overflow: hidden;
+}
+
+.person_circle {
+    position: absolute;
+    inset: auto 0 0;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 50%;
+    margin-inline: auto;
+}
+
+.person_img {
+    position: relative;
+    left: 3.5rem;
+    bottom: 1.6rem;
+    z-index: 2;
+    transform: scale(2);
+}
